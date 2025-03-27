@@ -1,0 +1,265 @@
+body {
+    background-color: #FFEBEB;
+    color: #5A3D3D;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #FFEBEB;
+    color: #5A3D3D;
+}
+
+.main-content h2 {
+    margin-top: 0;
+    color: #FF6B6B;
+}
+
+.search-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-filter input[type="text"] {
+    flex-grow: 1;
+    padding: 5px;
+    background-color: #FFDFDF;
+    color: #5A3D3D;
+    border: 1px solid #FF6B6B;
+    border-radius: 4px;
+}
+
+.search-filter button {
+    padding: 5px 10px;
+    background-color: #FF9E9E;
+    color: #5A3D3D;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-filter button:hover {
+    background-color: #FF7F7F;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #FFCCCC;
+    padding: 8px;
+    text-align: left;
+    color: #5A3D3D;
+}
+
+table th {
+    background-color: #FF6B6B;
+    color: #5A3D3D;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid #FF9E9E;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info h3 {
+    margin: 0;
+    color: #FF6B6B;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+    color: #5A3D3D;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    padding: 10px;
+    font-size: 14px;
+    background-color: #FFDFDF;
+    color: #5A3D3D;
+    border: 1px solid #FF6B6B;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: #FF9E9E;
+    color: #5A3D3D;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #FF7F7F;
+}
+
+.video-container {
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    /*height: calc(100vh - 40px);*/
+}
+
+.video-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #FFCCCC; /* Pastel Red border */
+}
+
+.nav-link.active {
+    background-color: #FF9E9E;
+    font-weight: bold;
+    color: #5A3D3D;
+}
+
+.btn-primary {
+    background-color: #FF9E9E;
+    border-color: #FF9E9E;
+    color: #5A3D3D;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #FF7F7F;
+    border-color: #FF7F7F;
+}
+
+.btn-secondary {
+    background-color: #FF6B6B;
+    color: #5A3D3D;
+    border-color: #5A3D3D;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #FFCCCC;
+    border-color: #FF6B6B;
+}
+
+/*.card {*/
+/*    background-color: #FF6B6B; !* Pastel Coral for card background *!*/
+/*    color: #5A3D3D; !* Deep Rose text *!*/
+/*    border-color: #5A3D3D;*/
+/*    transition: background-color 0.3s ease;*/
+/*}*/
+
+.card-yellow {
+    background: #FFD700;
+    color: #5A3D3D;
+}
+
+.card-yellow > .card-body {
+    background-color: #FFF4CC;
+}
+
+.card-red {
+    background-color: #DC3545;
+    border-color: #DC3545;
+}
+
+.card-red > .card-body {
+    background-color: #F5C6CB;
+    color: #5A3D3D;
+}
+
+/* Deep Green */
+.card-green {
+    background-color: #28A745;
+    border-color: #28A745;
+}
+
+.card-green > .card-body {
+    background-color: #C3E6CB;
+    color: #5A3D3D;
+
+}
+
+.card-pink {
+    background-color: #FF6B6B;
+}
+
+.card-pink > .card-body {
+    background: #FFCCCC;
+}
+
+.nav-link.active {
+    background-color: #FF6B6B !important;
+}
+
+.table-blue {
+    background-color: #87CEEB;
+    border-color: #87CEEB;
+}
+
+.table-blue thead {
+    background-color: #B0E0E6;
+    color: #333;
+}
+
+.table-blue tbody tr {
+    background-color: #E6F7FF;
+    color: #333;
+}
+
+.table-blue tbody tr:nth-child(odd) {
+    background-color: #D6EAF8;
+}
+
+.card-purple {
+    background-color: #D5A6F2;
+    border-color: #D5A6F2;
+}
+
+.card-purple-body {
+    background-color: #EDE7F6;
+    color: #333;
+}
+
+.card-purple .card-header {
+    background-color: #C9A3E8;
+    color: #fff;
+}
+
+video {
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

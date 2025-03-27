@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Live Feed - SentinelView{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2 class="mt-5 mb-5">Live Feed</h2>
+        <div class="video-container">
+            <img class="embed-responsive-item" src="{{ url_for('routes.video_feed') }}" alt="Live Feed">
+        </div>
+    </div>
+{% endblock %}

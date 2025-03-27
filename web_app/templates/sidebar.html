@@ -1,0 +1,65 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+    <a href="{{ url_for('routes.home') }}"
+       class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <span class="fs-4">SentinelView</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="{{ url_for('routes.home') }}"
+               class="nav-link text-white {{ 'active' if request.endpoint == 'routes.home' else '' }}">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ url_for('routes.browse_events') }}"
+               class="nav-link text-white {{ 'active' if request.endpoint == 'routes.browse_events' else '' }}">
+                <i class="fas fa-folder-open"></i>
+                Browse Events
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ url_for('routes.live_feed') }}"
+               class="nav-link text-white {{ 'active' if request.endpoint == 'routes.live_feed' else '' }}">
+                <i class="fas fa-video"></i>
+                Live Feed
+            </a>
+        </li>
+        {% if not session.get('user') %}
+            <li class="nav-item">
+                <a href="{{ url_for('routes.login') }}"
+                   class="nav-link text-white {{ 'active' if request.endpoint == 'routes.login' else '' }}">
+                    <i class="fa fa-sign-in"></i>
+                    Login
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('routes.register') }}"
+                   class="nav-link text-white {{ 'active' if request.endpoint == 'routes.register' else '' }}">
+                    <i class="fas fa-user-plus"></i>
+                    Register
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+    {% if session.get('user') %}
+        <hr>
+        <div class="dropdown">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+               id="dropdownUser1"
+               data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="{{ session['user']['profile_photo'] if session['user']['profile_photo'] else "https://picsum.photos/seed/" + session['user']['username'] + "/200" }}"
+                     alt="Profile picture" class="rounded-circle me-2" width="32" height="32">
+                <strong>{{ session['user']['username'] }}</strong>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1" style="">
+                <li><a class="dropdown-item" href="{{ url_for('routes.profile') }}">Profile</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="{{ url_for('routes.logout') }}">Sign out</a></li>
+            </ul>
+        </div>
+    {% endif %}
+</div>

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Event Details - SentinelView{% endblock %}
+
+{% block content %}
+    <div class="container overflow-scroll">
+        <h2 class="mt-5">Event Details</h2>
+
+        <div class="card mt-4 card-purple">
+            <div class="card-header">
+                Event Information
+            </div>
+            <div class="card-body card-purple-body">
+                <h5 class="card-title">Event: {{ event.title }}</h5>
+                <p class="card-text">Timestamp: {{ event.timestamp }}</p>
+                <p class="card-text">Description: {{ event.event_type }}</p>
+            </div>
+        </div>
+
+        <div class="card mt-4 card-purple">
+            <div class="card-header">
+                Footage
+            </div>
+            <div class="card-body card-purple-body">
+                <video controls style="max-width: 100%;">
+                    <source src="/analyses/{{ video_url }}" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="card mt-4 card-purple mb-5">
+            <div class="card-header">
+                Analysis
+            </div>
+            <div class="card-body card-purple-body">
+                <p class="card-text">{{ analysis }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
