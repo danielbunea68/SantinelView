@@ -20,7 +20,7 @@ Prerequisites:
 
 1. Clone the repository
     ```bash
-    git clone https://github.com/NitaCristian/SentinelView.git
+    git clone https://github.com/danielbunea68/SentinelView.git
     cd SentinelView
     ```
 
